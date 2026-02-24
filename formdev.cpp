@@ -15,8 +15,8 @@ FormDev::FormDev(QWidget *parent)
     modelDev->addColumn("ver_per",tr("Период поверки, мес."));
     modelDev->addColumn("is_use",tr("Используется"));
     modelDev->setSort("ver_dev.nam");
-    modelDev->setDefaultValue(3,12);
-    modelDev->setDefaultValue(4,true);
+    modelDev->setDefaultValue(4,12);
+    modelDev->setDefaultValue(5,true);
     modelDev->select();
 
     ui->tableViewDev->setModel(modelDev);
