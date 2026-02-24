@@ -10,7 +10,8 @@ FormDev::FormDev(QWidget *parent)
     modelDev = new DbTableModel("ver_dev",this);
     modelDev->addColumn("id",tr("id"));
     modelDev->addColumn("nam",tr("Название"));
-    modelDev->addColumn("numb",tr("Серийный номер"));
+    modelDev->addColumn("locat",tr("Место установки"));
+    modelDev->addColumn("numb",tr("Заводской номер"));
     modelDev->addColumn("ver_per",tr("Период поверки, мес."));
     modelDev->addColumn("is_use",tr("Используется"));
     modelDev->setSort("ver_dev.nam");
@@ -23,7 +24,8 @@ FormDev::FormDev(QWidget *parent)
     ui->tableViewDev->setColumnWidth(1,300);
     ui->tableViewDev->setColumnWidth(2,200);
     ui->tableViewDev->setColumnWidth(3,150);
-    ui->tableViewDev->setColumnWidth(4,90);
+    ui->tableViewDev->setColumnWidth(4,150);
+    ui->tableViewDev->setColumnWidth(5,90);
 
     connect(modelDev,SIGNAL(sigUpd()),Rels::instance()->relDev,SLOT(refreshModel()));
 }
