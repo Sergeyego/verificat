@@ -16,7 +16,7 @@ FormVer::FormVer(QWidget *parent)
 
     ui->tableViewVer->setModel(modelVer);
     ui->tableViewVer->setColumnWidth(0,100);
-    ui->tableViewVer->setColumnWidth(1,300);
+    ui->tableViewVer->setColumnWidth(1,500);
 
     connect(ui->pushButtonUpd,SIGNAL(clicked(bool)),this,SLOT(upd()));
     upd();

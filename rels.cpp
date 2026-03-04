@@ -11,10 +11,10 @@ Rels *Rels::instance()
 
 
 Rels::Rels(QObject *parent) : QObject(parent)
-{  
+{
 
-    relDev = new DbSqlRelation("ver_dev","id","nam",this);
+    relDev = new DbSqlRelation("ver_dev","id","str",this);
     relDev->setFilter("is_use=true");
-    relDev->setSort("nam");
+    relDev->setSort("str");
 }
 
