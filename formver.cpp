@@ -13,6 +13,7 @@ FormVer::FormVer(QWidget *parent)
     modelVer = new DbTableModel("ver_act",this);
     modelVer->addColumn("dat",tr("Дата поверки"));
     modelVer->addColumn("id_dev",tr("Прибор"),Rels::instance()->relDev);
+    modelVer->setSort("ver_act.dat, ver_dev.str");
 
     ui->tableViewVer->setModel(modelVer);
     ui->tableViewVer->setColumnWidth(0,100);
